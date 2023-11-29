@@ -1,12 +1,60 @@
-.header {
-    margin: 20px;
-    text-align: center;
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); 
 }
 
 .header img {
-    margin: 0 auto;
+    width: 10rem;
+    cursor: pointer;
+    animation: animate 3s infinite;
 }
 
-.header__top {
-    margin-top: 20px;
+.header {
+    background: #464444;
+    padding: 2rem 4rem;
+    width: 70rem;
+    border-radius: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0rem 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+nav ul li a:hover {
+    color: #0ba4c6;
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(23rem) rotateY(0deg);
+    }
+    
+    15% {
+        transform: perspective(23rem) rotateY(-35deg);
+    }
+    90%, 100% {
+        transform: perspective(23rem) rotateY(360deg);
+    }
 }
